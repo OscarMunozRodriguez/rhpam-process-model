@@ -12,15 +12,15 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("smtp.gmail.com", "587", "opplusdxd@gmail.com", "Opplusdxd1", "true")</identifier>
+            <identifier>es.dxd.opplus.jbpm.workitems.OpplusRestWorkItem(classLoader)</identifier>
             <parameters/>
-            <name>Email</name>
+            <name>RestOpplus</name>
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler(classLoader)</identifier>
+            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("smtp.gmail.com", "587", "opplusdxd@gmail.com", "Opplusdxd1", "true")</identifier>
             <parameters/>
-            <name>Rest</name>
+            <name>Email</name>
         </work-item-handler>
     </work-item-handlers>
     <environment-entries/>
