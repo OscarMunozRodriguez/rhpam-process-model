@@ -22,17 +22,17 @@
   <bpmn2:itemDefinition id="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_NumeroPeticionTVInputXItem" structureRef="String"/>
   
   <bpmn2:itemDefinition id="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_SkippableInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVOutputXItem" structureRef="es.dxd.opplus.jbpm.tarjetas.TarjetasBean"/>
+  
   <bpmn2:itemDefinition id="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_CodigoPantallaTVInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_NumeroPeticionTVInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVInputXItem" structureRef="es.dxd.opplus.jbpm.tarjetas.TarjetasBean"/>
+  
   <bpmn2:itemDefinition id="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_SkippableInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVOutputXItem" structureRef="es.dxd.opplus.jbpm.tarjetas.TarjetasBean"/>
+  
   <bpmn2:itemDefinition id="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_CodigoPantallaTVInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_NumeroPeticionTVInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_TarjetasTVInputXItem" structureRef="es.dxd.opplus.jbpm.tarjetas.TarjetasBean"/>
+  
   <bpmn2:itemDefinition id="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__3144EB44-6538-4C75-8A72-3F367E0ACE7B_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__3144EB44-6538-4C75-8A72-3F367E0ACE7B_RealmIdInputXItem" structureRef="String"/>
@@ -76,13 +76,10 @@
         <bpmn2:dataInput id="_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TaskNameInputX" drools:dtype="String" itemSubjectRef="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_CodigoPantallaTVInputX" drools:dtype="String" itemSubjectRef="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_CodigoPantallaTVInputXItem" name="CodigoPantallaTV"/>
         <bpmn2:dataInput id="_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_NumeroPeticionTVInputX" drools:dtype="String" itemSubjectRef="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_NumeroPeticionTVInputXItem" name="NumeroPeticionTV"/>
-        <bpmn2:dataInput id="_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVInputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVInputXItem" name="TarjetasTV"/>
         <bpmn2:dataInput id="_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_SkippableInputX" drools:dtype="Object" itemSubjectRef="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_SkippableInputXItem" name="Skippable"/>
-        <bpmn2:dataOutput id="_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVOutputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVOutputXItem" name="TarjetasTV"/>
         <bpmn2:inputSet id="_heXNUjqcEemjQaVGDJQO6g">
           <bpmn2:dataInputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_CodigoPantallaTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_NumeroPeticionTVInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
