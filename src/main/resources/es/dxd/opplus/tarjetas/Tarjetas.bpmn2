@@ -83,9 +83,6 @@
           <bpmn2:dataInputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_heX0YDqcEemjQaVGDJQO6g">
-          <bpmn2:dataOutputRefs>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_heX0YTqcEemjQaVGDJQO6g">
         <bpmn2:targetRef>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TaskNameInputX</bpmn2:targetRef>
@@ -105,10 +102,6 @@
         <bpmn2:sourceRef>NumeroPeticionPV</bpmn2:sourceRef>
         <bpmn2:targetRef>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_NumeroPeticionTVInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_heX0ajqcEemjQaVGDJQO6g">
-        <bpmn2:sourceRef>TarjetasPV</bpmn2:sourceRef>
-        <bpmn2:targetRef>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_heX0azqcEemjQaVGDJQO6g">
         <bpmn2:targetRef>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_SkippableInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_heX0bDqcEemjQaVGDJQO6g">
@@ -116,10 +109,6 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_heX0bjqcEemjQaVGDJQO6g">_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_heX0bzqcEemjQaVGDJQO6g">
-        <bpmn2:sourceRef>_9E515C52-5C05-4599-9CAE-B3D6AD7A3F32_TarjetasTVOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>TarjetasPV</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
       <bpmn2:potentialOwner id="_heX0cDqcEemjQaVGDJQO6g">
         <bpmn2:resourceAssignmentExpression id="_heX0cTqcEemjQaVGDJQO6g">
           <bpmn2:formalExpression id="_heX0cjqcEemjQaVGDJQO6g">admin</bpmn2:formalExpression>
@@ -379,19 +368,14 @@ System.out.println("Se ha escrito la anotación del BBVA");
         <bpmn2:dataInput id="_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TaskNameInputX" drools:dtype="String" itemSubjectRef="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_CodigoPantallaTVInputX" drools:dtype="String" itemSubjectRef="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_CodigoPantallaTVInputXItem" name="CodigoPantallaTV"/>
         <bpmn2:dataInput id="_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_NumeroPeticionTVInputX" drools:dtype="String" itemSubjectRef="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_NumeroPeticionTVInputXItem" name="NumeroPeticionTV"/>
-        <bpmn2:dataInput id="_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVInputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVInputXItem" name="TarjetasTV"/>
         <bpmn2:dataInput id="_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_SkippableInputX" drools:dtype="Object" itemSubjectRef="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataOutput id="_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVOutputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVOutputXItem" name="TarjetasTV"/>
         <bpmn2:inputSet id="_heX0eTqcEemjQaVGDJQO6g">
           <bpmn2:dataInputRefs>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_CodigoPantallaTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_NumeroPeticionTVInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_heX0ejqcEemjQaVGDJQO6g">
-          <bpmn2:dataOutputRefs>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_heX0ezqcEemjQaVGDJQO6g">
         <bpmn2:targetRef>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TaskNameInputX</bpmn2:targetRef>
@@ -411,10 +395,6 @@ System.out.println("Se ha escrito la anotación del BBVA");
         <bpmn2:sourceRef>NumeroPeticionPV</bpmn2:sourceRef>
         <bpmn2:targetRef>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_NumeroPeticionTVInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_heX0hDqcEemjQaVGDJQO6g">
-        <bpmn2:sourceRef>TarjetasPV</bpmn2:sourceRef>
-        <bpmn2:targetRef>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_heX0hTqcEemjQaVGDJQO6g">
         <bpmn2:targetRef>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_SkippableInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_heX0hjqcEemjQaVGDJQO6g">
@@ -422,10 +402,6 @@ System.out.println("Se ha escrito la anotación del BBVA");
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_heX0iDqcEemjQaVGDJQO6g">_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_heX0iTqcEemjQaVGDJQO6g">
-        <bpmn2:sourceRef>_AC34E6B8-3511-4380-9DBB-AFFD7AC5755D_TarjetasTVOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>TarjetasPV</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
       <bpmn2:potentialOwner id="_heX0ijqcEemjQaVGDJQO6g">
         <bpmn2:resourceAssignmentExpression id="_heX0izqcEemjQaVGDJQO6g">
           <bpmn2:formalExpression id="_heX0jDqcEemjQaVGDJQO6g">admin</bpmn2:formalExpression>
@@ -628,12 +604,10 @@ System.out.println("Se ha escrito la anotación del BBVA");
         <bpmn2:dataInput id="_ADB3F6FE-5C75-4D74-BEED-9590B9998118_TaskNameInputX" drools:dtype="String" itemSubjectRef="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="_ADB3F6FE-5C75-4D74-BEED-9590B9998118_CodigoPantallaTVInputX" drools:dtype="String" itemSubjectRef="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_CodigoPantallaTVInputXItem" name="CodigoPantallaTV"/>
         <bpmn2:dataInput id="_ADB3F6FE-5C75-4D74-BEED-9590B9998118_NumeroPeticionTVInputX" drools:dtype="String" itemSubjectRef="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_NumeroPeticionTVInputXItem" name="NumeroPeticionTV"/>
-        <bpmn2:dataInput id="_ADB3F6FE-5C75-4D74-BEED-9590B9998118_TarjetasTVInputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_TarjetasTVInputXItem" name="TarjetasTV"/>
         <bpmn2:dataInput id="_ADB3F6FE-5C75-4D74-BEED-9590B9998118_SkippableInputX" drools:dtype="Object" itemSubjectRef="__ADB3F6FE-5C75-4D74-BEED-9590B9998118_SkippableInputXItem" name="Skippable"/>
         <bpmn2:inputSet id="_heX0ljqcEemjQaVGDJQO6g">
           <bpmn2:dataInputRefs>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_CodigoPantallaTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_NumeroPeticionTVInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_TarjetasTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
@@ -656,10 +630,6 @@ System.out.println("Se ha escrito la anotación del BBVA");
       <bpmn2:dataInputAssociation id="_heX0oDqcEemjQaVGDJQO6g">
         <bpmn2:sourceRef>NumeroPeticionPV</bpmn2:sourceRef>
         <bpmn2:targetRef>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_NumeroPeticionTVInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_heX0oTqcEemjQaVGDJQO6g">
-        <bpmn2:sourceRef>TarjetasPV</bpmn2:sourceRef>
-        <bpmn2:targetRef>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_TarjetasTVInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_heX0ojqcEemjQaVGDJQO6g">
         <bpmn2:targetRef>_ADB3F6FE-5C75-4D74-BEED-9590B9998118_SkippableInputX</bpmn2:targetRef>
