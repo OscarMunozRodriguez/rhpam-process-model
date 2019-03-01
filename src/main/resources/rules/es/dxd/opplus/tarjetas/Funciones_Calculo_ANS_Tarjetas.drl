@@ -1,0 +1,28 @@
+package es.dxd.opplus.tarjetas;
+
+import es.dxd.opplus.jbpm.tarjetas.TarjetasBean;
+import es.dxd.opplus.jbpm.ProcesoParentBean;
+import java.util.Date;
+import java.util.Calendar;
+
+function Date calculoFechaLimite(Date fechaInicio, int horaLimite, int minutosLimite){
+    System.out.println("Inicio calculoFechaLimite:"+fechaInicio);
+    Calendar cal = Calendar.getInstance();
+    cal.setTime(fechaInicio);
+    cal.set(Calendar.HOUR_OF_DAY, horaLimite);
+    cal.set(Calendar.MINUTE, minutosLimite);
+    cal.set(Calendar.SECOND, 0);
+    Date fechaLimite = cal.getTime();
+ 
+    return fechaLimite;
+}
+
+rule "Funciones_Calculo_ANS_Tarjetas"
+ruleflow-group "Calculo_ANS_Tarjetas"
+lock-on-active true 
+
+when
+ //Nunca se evalua debido a que solo se definen funciones en esta drl.
+ eval(false)
+then
+end
