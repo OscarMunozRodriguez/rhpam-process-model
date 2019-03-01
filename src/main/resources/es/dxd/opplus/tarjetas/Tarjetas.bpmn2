@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_rMkVsDwVEemUpMiUYoHryA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_4pmQoDwXEemUpMiUYoHryA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_NumeroPeticionPVItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_TarjetasPVItem" structureRef="es.dxd.opplus.jbpm.tarjetas.TarjetasBean"/>
   <bpmn2:itemDefinition id="_SlaTarjetasPVItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_VolverAdmisionPVItem" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_RealmIdPVItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_ClientIdBackPVItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_ClientSecretBackPVItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_UrlBackPVItem" structureRef="String"/>
   <bpmn2:signal id="_ba88a533-fe50-393f-9bb5-326f2780b7f4" name="Signal_Tarjetas"/>
   <bpmn2:itemDefinition id="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_CodigoPantallaTVInputXItem" structureRef="String"/>
@@ -23,6 +27,10 @@
     <bpmn2:property id="TarjetasPV" itemSubjectRef="_TarjetasPVItem"/>
     <bpmn2:property id="SlaTarjetasPV" itemSubjectRef="_SlaTarjetasPVItem"/>
     <bpmn2:property id="VolverAdmisionPV" itemSubjectRef="_VolverAdmisionPVItem"/>
+    <bpmn2:property id="RealmIdPV" itemSubjectRef="_RealmIdPVItem"/>
+    <bpmn2:property id="ClientIdBackPV" itemSubjectRef="_ClientIdBackPVItem"/>
+    <bpmn2:property id="ClientSecretBackPV" itemSubjectRef="_ClientSecretBackPVItem"/>
+    <bpmn2:property id="UrlBackPV" itemSubjectRef="_UrlBackPVItem"/>
     <bpmn2:userTask id="_AEA456D3-3620-4F7F-BC54-AD567F9421EB" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Admisión">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
@@ -31,60 +39,60 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_A7902D16-9CD1-4D1A-BCF6-BA3567450B94</bpmn2:incoming>
       <bpmn2:outgoing>_03A5FDF3-9E33-4A3D-85F3-E4167573E9E8</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_rMkVsTwVEemUpMiUYoHryA">
+      <bpmn2:ioSpecification id="_4pmQoTwXEemUpMiUYoHryA">
         <bpmn2:dataInput id="_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TaskNameInputX" drools:dtype="String" itemSubjectRef="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="_AEA456D3-3620-4F7F-BC54-AD567F9421EB_CodigoPantallaTVInputX" drools:dtype="String" itemSubjectRef="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_CodigoPantallaTVInputXItem" name="CodigoPantallaTV"/>
         <bpmn2:dataInput id="_AEA456D3-3620-4F7F-BC54-AD567F9421EB_NumeroPeticionTVInputX" drools:dtype="String" itemSubjectRef="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_NumeroPeticionTVInputXItem" name="NumeroPeticionTV"/>
         <bpmn2:dataInput id="_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVInputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVInputXItem" name="TarjetasTV"/>
         <bpmn2:dataInput id="_AEA456D3-3620-4F7F-BC54-AD567F9421EB_SkippableInputX" drools:dtype="Object" itemSubjectRef="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataOutput id="_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVOutputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVOutputXItem" name="TarjetasTV"/>
-        <bpmn2:inputSet id="_rMkVsjwVEemUpMiUYoHryA">
+        <bpmn2:inputSet id="_4pmQojwXEemUpMiUYoHryA">
           <bpmn2:dataInputRefs>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_CodigoPantallaTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_NumeroPeticionTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_rMkVszwVEemUpMiUYoHryA">
+        <bpmn2:outputSet id="_4pmQozwXEemUpMiUYoHryA">
           <bpmn2:dataOutputRefs>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_rMkVtDwVEemUpMiUYoHryA">
+      <bpmn2:dataInputAssociation id="_4pmQpDwXEemUpMiUYoHryA">
         <bpmn2:targetRef>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_rMkVtTwVEemUpMiUYoHryA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_rMkVtjwVEemUpMiUYoHryA"><![CDATA[Tarjetas.Admision]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_rMkVtzwVEemUpMiUYoHryA">_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_4pmQpTwXEemUpMiUYoHryA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_4pmQpjwXEemUpMiUYoHryA"><![CDATA[Tarjetas.Admision]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_4pmQpzwXEemUpMiUYoHryA">_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_rMkVuDwVEemUpMiUYoHryA">
+      <bpmn2:dataInputAssociation id="_4pmQqDwXEemUpMiUYoHryA">
         <bpmn2:targetRef>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_CodigoPantallaTVInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_rMkVuTwVEemUpMiUYoHryA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_rMkVujwVEemUpMiUYoHryA"><![CDATA[Tarjetas.Admision]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_rMkVuzwVEemUpMiUYoHryA">_AEA456D3-3620-4F7F-BC54-AD567F9421EB_CodigoPantallaTVInputX</bpmn2:to>
+        <bpmn2:assignment id="_4pmQqTwXEemUpMiUYoHryA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_4pmQqjwXEemUpMiUYoHryA"><![CDATA[Tarjetas.Admision]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_4pmQqzwXEemUpMiUYoHryA">_AEA456D3-3620-4F7F-BC54-AD567F9421EB_CodigoPantallaTVInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_rMkVvDwVEemUpMiUYoHryA">
+      <bpmn2:dataInputAssociation id="_4pmQrDwXEemUpMiUYoHryA">
         <bpmn2:sourceRef>NumeroPeticionPV</bpmn2:sourceRef>
         <bpmn2:targetRef>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_NumeroPeticionTVInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_rMkVvTwVEemUpMiUYoHryA">
+      <bpmn2:dataInputAssociation id="_4pmQrTwXEemUpMiUYoHryA">
         <bpmn2:sourceRef>TarjetasPV</bpmn2:sourceRef>
         <bpmn2:targetRef>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_rMkVvjwVEemUpMiUYoHryA">
+      <bpmn2:dataInputAssociation id="_4pmQrjwXEemUpMiUYoHryA">
         <bpmn2:targetRef>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_rMkVvzwVEemUpMiUYoHryA">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_rMkVwDwVEemUpMiUYoHryA">true</bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_rMkVwTwVEemUpMiUYoHryA">_AEA456D3-3620-4F7F-BC54-AD567F9421EB_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_4pmQrzwXEemUpMiUYoHryA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_4pmQsDwXEemUpMiUYoHryA">true</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_4pmQsTwXEemUpMiUYoHryA">_AEA456D3-3620-4F7F-BC54-AD567F9421EB_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_rMkVwjwVEemUpMiUYoHryA">
+      <bpmn2:dataOutputAssociation id="_4pmQsjwXEemUpMiUYoHryA">
         <bpmn2:sourceRef>_AEA456D3-3620-4F7F-BC54-AD567F9421EB_TarjetasTVOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>TarjetasPV</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_rMkVwzwVEemUpMiUYoHryA">
-        <bpmn2:resourceAssignmentExpression id="_rMkVxDwVEemUpMiUYoHryA">
-          <bpmn2:formalExpression id="_rMkVxTwVEemUpMiUYoHryA">admin</bpmn2:formalExpression>
+      <bpmn2:potentialOwner id="_4pmQszwXEemUpMiUYoHryA">
+        <bpmn2:resourceAssignmentExpression id="_4pmQtDwXEemUpMiUYoHryA">
+          <bpmn2:formalExpression id="_4pmQtTwXEemUpMiUYoHryA">admin</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
     </bpmn2:userTask>
@@ -106,6 +114,26 @@
       <bpmn2:script><![CDATA[es.dxd.opplus.jbpm.tarjetas.TarjetasBean tarjetas = new es.dxd.opplus.jbpm.tarjetas.TarjetasBean();
 kcontext.setVariable("TarjetasPV",tarjetas);
 kcontext.setVariable("SlaTarjetasPV","");
+
+
+//Constantes keycloak
+String keycloakProperties = java.lang.System.getProperty("keycloak.configuration");
+java.io.FileInputStream stream= new java.io.FileInputStream(keycloakProperties);
+java.util.Properties propiedades = new java.util.Properties();
+propiedades.load(stream);
+
+kcontext.setVariable("RealmIdPV", propiedades.getProperty("admin-cli-keycloak.realmIdOpplus"));
+kcontext.setVariable("ClientIdBackPV", propiedades.getProperty("keycloak.clientId-back"));
+kcontext.setVariable("ClientSecretBackPV", propiedades.getProperty("keycloak.clientSecret-back"));
+System.out.println("Obtengo las variables del keycloack");
+
+//Variables back
+java.io.FileInputStream streamBack= new java.io.FileInputStream("/opt/jboss/jboss-eap-7.1/conf/bpm.properties");
+java.util.Properties propiedadeBack = new java.util.Properties();
+propiedadeBack.load(streamBack);
+kcontext.setVariable("UrlBackPV",propiedadeBack.getProperty("back.url"));
+
+
 System.out.println("El bean de Tarjetas esta inicializado");                                 ]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:sequenceFlow id="_7E9880C2-31AF-4AA9-BBE9-8F15AD79498D" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_93756A25-1A06-424D-9E88-51075A5BD9AB" targetRef="_6609AA7D-F295-4C10-B6AB-90116B2B9A49"/>
@@ -117,14 +145,14 @@ System.out.println("El bean de Tarjetas esta inicializado");                    
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_7E9880C2-31AF-4AA9-BBE9-8F15AD79498D</bpmn2:outgoing>
       <bpmn2:dataOutput id="_93756A25-1A06-424D-9E88-51075A5BD9AB_NumeroPeticionPV" drools:dtype="String" name="NumeroPeticionPV"/>
-      <bpmn2:dataOutputAssociation id="_rMk8wTwVEemUpMiUYoHryA">
+      <bpmn2:dataOutputAssociation id="_4pmQtzwXEemUpMiUYoHryA">
         <bpmn2:sourceRef>_93756A25-1A06-424D-9E88-51075A5BD9AB_NumeroPeticionPV</bpmn2:sourceRef>
         <bpmn2:targetRef>NumeroPeticionPV</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:outputSet id="_rMk8wDwVEemUpMiUYoHryA">
+      <bpmn2:outputSet id="_4pmQtjwXEemUpMiUYoHryA">
         <bpmn2:dataOutputRefs>_93756A25-1A06-424D-9E88-51075A5BD9AB_NumeroPeticionPV</bpmn2:dataOutputRefs>
       </bpmn2:outputSet>
-      <bpmn2:signalEventDefinition id="_rMk8wjwVEemUpMiUYoHryA" signalRef="_ba88a533-fe50-393f-9bb5-326f2780b7f4"/>
+      <bpmn2:signalEventDefinition id="_4pmQuDwXEemUpMiUYoHryA" signalRef="_ba88a533-fe50-393f-9bb5-326f2780b7f4"/>
     </bpmn2:startEvent>
     <bpmn2:callActivity id="_B37AA522-3120-4232-AC91-3EF9A14E01D4" drools:selectable="true" drools:independent="true" drools:waitForCompletion="true" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Subproceso Tarjetas" calledElement="Opplus.SubprocesoTarjeta">
       <bpmn2:extensionElements>
@@ -134,27 +162,27 @@ System.out.println("El bean de Tarjetas esta inicializado");                    
       </bpmn2:extensionElements>
       <bpmn2:incoming>_03A5FDF3-9E33-4A3D-85F3-E4167573E9E8</bpmn2:incoming>
       <bpmn2:outgoing>_8D61B8C7-FDFD-4CFA-8008-7203C3ECE66A</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_rMk8wzwVEemUpMiUYoHryA">
+      <bpmn2:ioSpecification id="_4pmQuTwXEemUpMiUYoHryA">
         <bpmn2:dataInput id="_B37AA522-3120-4232-AC91-3EF9A14E01D4_TarjetasTVInputX" drools:dtype="es.dxd.opplus.jbpm.tarjetas.TarjetasBean" itemSubjectRef="__B37AA522-3120-4232-AC91-3EF9A14E01D4_TarjetasTVInputXItem" name="TarjetasTV"/>
         <bpmn2:dataInput id="_B37AA522-3120-4232-AC91-3EF9A14E01D4_NumeroPeticionTVInputX" drools:dtype="String" itemSubjectRef="__B37AA522-3120-4232-AC91-3EF9A14E01D4_NumeroPeticionTVInputXItem" name="NumeroPeticionTV"/>
         <bpmn2:dataOutput id="_B37AA522-3120-4232-AC91-3EF9A14E01D4_VolverAdmisionPVOutputX" drools:dtype="Boolean" itemSubjectRef="__B37AA522-3120-4232-AC91-3EF9A14E01D4_VolverAdmisionPVOutputXItem" name="VolverAdmisionPV"/>
-        <bpmn2:inputSet id="_rMk8xDwVEemUpMiUYoHryA">
+        <bpmn2:inputSet id="_4pmQujwXEemUpMiUYoHryA">
           <bpmn2:dataInputRefs>_B37AA522-3120-4232-AC91-3EF9A14E01D4_TarjetasTVInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_B37AA522-3120-4232-AC91-3EF9A14E01D4_NumeroPeticionTVInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_rMk8xTwVEemUpMiUYoHryA">
+        <bpmn2:outputSet id="_4pmQuzwXEemUpMiUYoHryA">
           <bpmn2:dataOutputRefs>_B37AA522-3120-4232-AC91-3EF9A14E01D4_VolverAdmisionPVOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_rMk8xjwVEemUpMiUYoHryA">
+      <bpmn2:dataInputAssociation id="_4pmQvDwXEemUpMiUYoHryA">
         <bpmn2:sourceRef>TarjetasPV</bpmn2:sourceRef>
         <bpmn2:targetRef>_B37AA522-3120-4232-AC91-3EF9A14E01D4_TarjetasTVInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_rMk8xzwVEemUpMiUYoHryA">
+      <bpmn2:dataInputAssociation id="_4pmQvTwXEemUpMiUYoHryA">
         <bpmn2:sourceRef>NumeroPeticionPV</bpmn2:sourceRef>
         <bpmn2:targetRef>_B37AA522-3120-4232-AC91-3EF9A14E01D4_NumeroPeticionTVInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_rMk8yDwVEemUpMiUYoHryA">
+      <bpmn2:dataOutputAssociation id="_4pmQvjwXEemUpMiUYoHryA">
         <bpmn2:sourceRef>_B37AA522-3120-4232-AC91-3EF9A14E01D4_VolverAdmisionPVOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>VolverAdmisionPV</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
@@ -174,81 +202,81 @@ System.out.println("El bean de Tarjetas esta inicializado");                    
       <bpmn2:incoming>_39DB83AF-12B6-4062-8338-42927BBA975D</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:sequenceFlow id="_39DB83AF-12B6-4062-8338-42927BBA975D" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_59786CD1-9722-437B-96BE-2681094C1F7A" targetRef="_732CD082-EC09-42A3-9C92-75960C07BE76">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_rMk8yTwVEemUpMiUYoHryA" language="http://www.java.com/java"><![CDATA[return  KieFunctions.isFalse(VolverAdmisionPV);]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_4pmQvzwXEemUpMiUYoHryA" language="http://www.java.com/java"><![CDATA[return  KieFunctions.isFalse(VolverAdmisionPV);]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_7AF40A52-B95C-4EFE-A174-3A529100809C" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_59786CD1-9722-437B-96BE-2681094C1F7A" targetRef="_6609AA7D-F295-4C10-B6AB-90116B2B9A49">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_rMk8yjwVEemUpMiUYoHryA" language="http://www.java.com/java"><![CDATA[return  KieFunctions.isTrue(VolverAdmisionPV);]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_4pmQwDwXEemUpMiUYoHryA" language="http://www.java.com/java"><![CDATA[return  KieFunctions.isTrue(VolverAdmisionPV);]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_03A5FDF3-9E33-4A3D-85F3-E4167573E9E8" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_AEA456D3-3620-4F7F-BC54-AD567F9421EB" targetRef="_B37AA522-3120-4232-AC91-3EF9A14E01D4"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_rMk8yzwVEemUpMiUYoHryA">
-    <bpmndi:BPMNPlane id="_rMk8zDwVEemUpMiUYoHryA" bpmnElement="Opplus.Tarjetas">
-      <bpmndi:BPMNShape id="_rMk8zTwVEemUpMiUYoHryA" bpmnElement="_AEA456D3-3620-4F7F-BC54-AD567F9421EB">
-        <dc:Bounds height="80.0" width="100.0" x="465.0" y="390.0"/>
+  <bpmndi:BPMNDiagram id="_4pm3sDwXEemUpMiUYoHryA">
+    <bpmndi:BPMNPlane id="_4pm3sTwXEemUpMiUYoHryA" bpmnElement="Opplus.Tarjetas">
+      <bpmndi:BPMNShape id="_4pm3sjwXEemUpMiUYoHryA" bpmnElement="_AEA456D3-3620-4F7F-BC54-AD567F9421EB">
+        <dc:Bounds height="80.0" width="100.0" x="555.0" y="404.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_rMk8zjwVEemUpMiUYoHryA" bpmnElement="_6609AA7D-F295-4C10-B6AB-90116B2B9A49">
+      <bpmndi:BPMNShape id="_4pm3szwXEemUpMiUYoHryA" bpmnElement="_6609AA7D-F295-4C10-B6AB-90116B2B9A49">
         <dc:Bounds height="40.0" width="40.0" x="137.0" y="424.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_rMk8zzwVEemUpMiUYoHryA" bpmnElement="_C19B1C3D-9B1E-4E39-BE9B-77B4355A7490">
+      <bpmndi:BPMNShape id="_4pm3tDwXEemUpMiUYoHryA" bpmnElement="_C19B1C3D-9B1E-4E39-BE9B-77B4355A7490">
         <dc:Bounds height="80.0" width="100.0" x="255.0" y="404.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_rMk80DwVEemUpMiUYoHryA" bpmnElement="_93756A25-1A06-424D-9E88-51075A5BD9AB">
+      <bpmndi:BPMNShape id="_4pm3tTwXEemUpMiUYoHryA" bpmnElement="_93756A25-1A06-424D-9E88-51075A5BD9AB">
         <dc:Bounds height="30.0" width="30.0" x="30.0" y="429.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_rMk80TwVEemUpMiUYoHryA" bpmnElement="_B37AA522-3120-4232-AC91-3EF9A14E01D4">
+      <bpmndi:BPMNShape id="_4pm3tjwXEemUpMiUYoHryA" bpmnElement="_B37AA522-3120-4232-AC91-3EF9A14E01D4">
         <dc:Bounds height="80.0" width="100.0" x="945.0" y="404.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_rMk80jwVEemUpMiUYoHryA" bpmnElement="_59786CD1-9722-437B-96BE-2681094C1F7A">
+      <bpmndi:BPMNShape id="_4pm3tzwXEemUpMiUYoHryA" bpmnElement="_59786CD1-9722-437B-96BE-2681094C1F7A">
         <dc:Bounds height="40.0" width="40.0" x="1095.0" y="424.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_rMk80zwVEemUpMiUYoHryA" bpmnElement="_732CD082-EC09-42A3-9C92-75960C07BE76">
+      <bpmndi:BPMNShape id="_4pm3uDwXEemUpMiUYoHryA" bpmnElement="_732CD082-EC09-42A3-9C92-75960C07BE76">
         <dc:Bounds height="28.0" width="28.0" x="1200.0" y="430.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_rMk81DwVEemUpMiUYoHryA" bpmnElement="_A7902D16-9CD1-4D1A-BCF6-BA3567450B94" sourceElement="_rMk8zzwVEemUpMiUYoHryA" targetElement="_rMk8zTwVEemUpMiUYoHryA">
+      <bpmndi:BPMNEdge id="_4pm3uTwXEemUpMiUYoHryA" bpmnElement="_A7902D16-9CD1-4D1A-BCF6-BA3567450B94" sourceElement="_4pm3tDwXEemUpMiUYoHryA" targetElement="_4pm3sjwXEemUpMiUYoHryA">
         <di:waypoint xsi:type="dc:Point" x="305.0" y="444.0"/>
-        <di:waypoint xsi:type="dc:Point" x="515.0" y="430.0"/>
+        <di:waypoint xsi:type="dc:Point" x="605.0" y="444.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_rMk81TwVEemUpMiUYoHryA" bpmnElement="_8A5187E9-B0B8-456A-88B6-1B780E070D3F" sourceElement="_rMk8zjwVEemUpMiUYoHryA" targetElement="_rMk8zzwVEemUpMiUYoHryA">
+      <bpmndi:BPMNEdge id="_4pm3ujwXEemUpMiUYoHryA" bpmnElement="_8A5187E9-B0B8-456A-88B6-1B780E070D3F" sourceElement="_4pm3szwXEemUpMiUYoHryA" targetElement="_4pm3tDwXEemUpMiUYoHryA">
         <di:waypoint xsi:type="dc:Point" x="157.0" y="444.0"/>
         <di:waypoint xsi:type="dc:Point" x="305.0" y="444.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_rMk81jwVEemUpMiUYoHryA" bpmnElement="_7E9880C2-31AF-4AA9-BBE9-8F15AD79498D" sourceElement="_rMk80DwVEemUpMiUYoHryA" targetElement="_rMk8zjwVEemUpMiUYoHryA">
+      <bpmndi:BPMNEdge id="_4pm3uzwXEemUpMiUYoHryA" bpmnElement="_7E9880C2-31AF-4AA9-BBE9-8F15AD79498D" sourceElement="_4pm3tTwXEemUpMiUYoHryA" targetElement="_4pm3szwXEemUpMiUYoHryA">
         <di:waypoint xsi:type="dc:Point" x="45.0" y="444.0"/>
         <di:waypoint xsi:type="dc:Point" x="157.0" y="444.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_rMk81zwVEemUpMiUYoHryA" bpmnElement="_8D61B8C7-FDFD-4CFA-8008-7203C3ECE66A" sourceElement="_rMk80TwVEemUpMiUYoHryA" targetElement="_rMk80jwVEemUpMiUYoHryA">
+      <bpmndi:BPMNEdge id="_4pm3vDwXEemUpMiUYoHryA" bpmnElement="_8D61B8C7-FDFD-4CFA-8008-7203C3ECE66A" sourceElement="_4pm3tjwXEemUpMiUYoHryA" targetElement="_4pm3tzwXEemUpMiUYoHryA">
         <di:waypoint xsi:type="dc:Point" x="995.0" y="444.0"/>
         <di:waypoint xsi:type="dc:Point" x="1115.0" y="444.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_rMk82DwVEemUpMiUYoHryA" bpmnElement="_39DB83AF-12B6-4062-8338-42927BBA975D" sourceElement="_rMk80jwVEemUpMiUYoHryA" targetElement="_rMk80zwVEemUpMiUYoHryA">
+      <bpmndi:BPMNEdge id="_4pm3vTwXEemUpMiUYoHryA" bpmnElement="_39DB83AF-12B6-4062-8338-42927BBA975D" sourceElement="_4pm3tzwXEemUpMiUYoHryA" targetElement="_4pm3uDwXEemUpMiUYoHryA">
         <di:waypoint xsi:type="dc:Point" x="1115.0" y="444.0"/>
         <di:waypoint xsi:type="dc:Point" x="1214.0" y="444.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_rMk82TwVEemUpMiUYoHryA" bpmnElement="_7AF40A52-B95C-4EFE-A174-3A529100809C" sourceElement="_rMk80jwVEemUpMiUYoHryA" targetElement="_rMk8zjwVEemUpMiUYoHryA">
+      <bpmndi:BPMNEdge id="_4pm3vjwXEemUpMiUYoHryA" bpmnElement="_7AF40A52-B95C-4EFE-A174-3A529100809C" sourceElement="_4pm3tzwXEemUpMiUYoHryA" targetElement="_4pm3szwXEemUpMiUYoHryA">
         <di:waypoint xsi:type="dc:Point" x="1115.0" y="444.0"/>
         <di:waypoint xsi:type="dc:Point" x="1115.0" y="286.0"/>
         <di:waypoint xsi:type="dc:Point" x="157.0" y="286.0"/>
         <di:waypoint xsi:type="dc:Point" x="157.0" y="444.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_rMk82jwVEemUpMiUYoHryA" bpmnElement="_03A5FDF3-9E33-4A3D-85F3-E4167573E9E8" sourceElement="_rMk8zTwVEemUpMiUYoHryA" targetElement="_rMk80TwVEemUpMiUYoHryA">
-        <di:waypoint xsi:type="dc:Point" x="515.0" y="430.0"/>
+      <bpmndi:BPMNEdge id="_4pm3vzwXEemUpMiUYoHryA" bpmnElement="_03A5FDF3-9E33-4A3D-85F3-E4167573E9E8" sourceElement="_4pm3sjwXEemUpMiUYoHryA" targetElement="_4pm3tjwXEemUpMiUYoHryA">
+        <di:waypoint xsi:type="dc:Point" x="605.0" y="444.0"/>
         <di:waypoint xsi:type="dc:Point" x="995.0" y="444.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_rMk82zwVEemUpMiUYoHryA" type="BPSimData">
+  <bpmn2:relationship id="_4pm3wDwXEemUpMiUYoHryA" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_7E9880C2-31AF-4AA9-BBE9-8F15AD79498D" id="_rMk83DwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_7E9880C2-31AF-4AA9-BBE9-8F15AD79498D" id="_4pm3wTwXEemUpMiUYoHryA">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_B37AA522-3120-4232-AC91-3EF9A14E01D4" id="_rMk83TwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_B37AA522-3120-4232-AC91-3EF9A14E01D4" id="_4pm3wjwXEemUpMiUYoHryA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -260,14 +288,14 @@ System.out.println("El bean de Tarjetas esta inicializado");                    
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_39DB83AF-12B6-4062-8338-42927BBA975D" id="_rMk83jwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_39DB83AF-12B6-4062-8338-42927BBA975D" id="_4pm3wzwXEemUpMiUYoHryA">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_AEA456D3-3620-4F7F-BC54-AD567F9421EB" id="_rMk83zwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_AEA456D3-3620-4F7F-BC54-AD567F9421EB" id="_4pm3xDwXEemUpMiUYoHryA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -287,42 +315,42 @@ System.out.println("El bean de Tarjetas esta inicializado");                    
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8A5187E9-B0B8-456A-88B6-1B780E070D3F" id="_rMk84DwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8A5187E9-B0B8-456A-88B6-1B780E070D3F" id="_4pm3xTwXEemUpMiUYoHryA">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8D61B8C7-FDFD-4CFA-8008-7203C3ECE66A" id="_rMk84TwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8D61B8C7-FDFD-4CFA-8008-7203C3ECE66A" id="_4pm3xjwXEemUpMiUYoHryA">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A7902D16-9CD1-4D1A-BCF6-BA3567450B94" id="_rMk84jwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A7902D16-9CD1-4D1A-BCF6-BA3567450B94" id="_4pm3xzwXEemUpMiUYoHryA">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_7AF40A52-B95C-4EFE-A174-3A529100809C" id="_rMk84zwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_7AF40A52-B95C-4EFE-A174-3A529100809C" id="_4pm3yDwXEemUpMiUYoHryA">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_03A5FDF3-9E33-4A3D-85F3-E4167573E9E8" id="_rMk85DwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_03A5FDF3-9E33-4A3D-85F3-E4167573E9E8" id="_4pm3yTwXEemUpMiUYoHryA">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_93756A25-1A06-424D-9E88-51075A5BD9AB" id="_rMk85TwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_93756A25-1A06-424D-9E88-51075A5BD9AB" id="_4pm3yjwXEemUpMiUYoHryA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -334,14 +362,14 @@ System.out.println("El bean de Tarjetas esta inicializado");                    
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_732CD082-EC09-42A3-9C92-75960C07BE76" id="_rMk85jwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_732CD082-EC09-42A3-9C92-75960C07BE76" id="_4pm3yzwXEemUpMiUYoHryA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C19B1C3D-9B1E-4E39-BE9B-77B4355A7490" id="_rMk85zwVEemUpMiUYoHryA">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_C19B1C3D-9B1E-4E39-BE9B-77B4355A7490" id="_4pm3zDwXEemUpMiUYoHryA">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -356,7 +384,7 @@ System.out.println("El bean de Tarjetas esta inicializado");                    
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_rMkVsDwVEemUpMiUYoHryA</bpmn2:source>
-    <bpmn2:target>_rMkVsDwVEemUpMiUYoHryA</bpmn2:target>
+    <bpmn2:source>_4pmQoDwXEemUpMiUYoHryA</bpmn2:source>
+    <bpmn2:target>_4pmQoDwXEemUpMiUYoHryA</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
