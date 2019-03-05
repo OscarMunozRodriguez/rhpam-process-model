@@ -2,16 +2,47 @@
   <tableName>Calculo_ANS_Tabla</tableName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>50</width>
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>150</width>
   </descriptionCol>
   <metadataCols/>
   <attributeCols/>
   <conditionPatterns/>
-  <actionCols/>
+  <actionCols>
+    <insert-fact-column52>
+      <typedDefaultValue>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>TIPO_TARJETA</header>
+      <factType>TarjetasBean</factType>
+      <boundName>tarjetasBean</boundName>
+      <factField>tipoTarjeta</factField>
+      <type>String</type>
+      <isInsertLogical>true</isInsertLogical>
+    </insert-fact-column52>
+    <insert-fact-column52>
+      <typedDefaultValue>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>NUMERO_TARJETAS</header>
+      <factType>TarjetasBean</factType>
+      <boundName>tarjetasBean</boundName>
+      <factField>numeroTotalTarjetas</factField>
+      <type>Integer</type>
+      <isInsertLogical>true</isInsertLogical>
+    </insert-fact-column52>
+  </actionCols>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
       <acceptedTypes>
@@ -40,7 +71,11 @@
     <entries/>
   </auditLog>
   <imports>
-    <imports/>
+    <imports>
+      <org.kie.soup.project.datamodel.imports.Import>
+        <type>es.dxd.opplus.jbpm.tarjetas.TarjetasBean</type>
+      </org.kie.soup.project.datamodel.imports.Import>
+    </imports>
   </imports>
   <packageName>rules.es.dxd.opplus.tarjetas</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
