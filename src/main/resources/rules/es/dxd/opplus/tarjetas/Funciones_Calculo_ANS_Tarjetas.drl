@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Calendar;
 
 function Date calculoFechaLimite(Date fechaInicio, int horaLimite, int minutosLimite){
-    System.out.println("Inicio calculoFechaLimite biennn:"+fechaInicio);
+    System.out.println("Inicio calculoFechaLimite:"+fechaInicio);
     Calendar cal = Calendar.getInstance();
     cal.setTime(fechaInicio);
     cal.set(Calendar.HOUR_OF_DAY, horaLimite);
